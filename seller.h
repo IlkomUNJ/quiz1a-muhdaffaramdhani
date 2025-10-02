@@ -22,7 +22,8 @@ public:
     seller() = default;
 
     seller(Buyer buyer, int sellerId, const std::string& sellerName)
-        : Buyer(buyer.getId(), buyer.getName(), buyer.getAccount()), sellerId(sellerId), sellerName(sellerName) {
+        : Buyer(buyer.getId(), buyer.getName(), buyer.getAddress(), buyer.getPhoneNumber(), buyer.getAccount()),
+          sellerId(sellerId), sellerName(sellerName) {
             Buyer::setId(buyer.getId());
         }
 
